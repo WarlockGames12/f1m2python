@@ -26,6 +26,10 @@ playerSprite = pygame.image.load("../art/spr_Player.png")
 playerRect = playerSprite.get_rect()
 playerSpeed = 5
 
+enemySprite = pygame.image.load("../art/spr_Enemy.png")
+enemyRect = enemySprite.get_rect()
+enemySpeed = 5
+
 
 while IS_RUNNING:
 
@@ -48,14 +52,23 @@ while IS_RUNNING:
     # UPDATE GAME LOGIC:
     # ------------------------------------------------
     if (KEYS_DOWN[K_UP]):
+        playerSprite = pygame.image.load("../art/spr_Player.png");
         playerRect.y -= playerSpeed
+        playerSprite = pygame.image.load("../art/spr_Player1.png");
     elif (KEYS_DOWN[K_DOWN]):
+        playerSprite = pygame.image.load("../art/spr_Player1.png");
         playerRect.y += playerSpeed
+        playerSprite = pygame.image.load("../art/spr_Player.png");
+       
 
     if (KEYS_DOWN[K_LEFT]):
+        playerSprite = pygame.image.load("../art/spr_Player.png");
         playerRect.x -= playerSpeed
+        playerSprite = pygame.image.load("../art/spr_Player1.png");
     elif (KEYS_DOWN[K_RIGHT]):
+        playerSprite = pygame.image.load("../art/spr_Player1.png");
         playerRect.x += playerSpeed
+        playerSprite = pygame.image.load("../art/spr_Player.png");
     
 
     # ------------------------------------------------
@@ -64,7 +77,7 @@ while IS_RUNNING:
     # First clear the screen with a background color.
     # If you don't, you'll draw on top of what was previously drawn. See for yourself by removing/commenting this line... :)
     SCREEN.fill(BG_COLOUR)
-
+    
     # Then draw sprites on the current location:
     SCREEN.blit(playerSprite, playerRect)
     
