@@ -25,23 +25,37 @@ class Stand:
     _Precision = 'A'
     _Potential = 'C'
 
-    def Stands(self):
+    def Power(self):
         print("The stand's power is: ", self._Power)
+    def Speed(self):
         print("The stand's speed is: ", self._Speed)
+    def Range(self):
         print("The stand's range is: ", self._Range)
-        print("The stand's Durability is: ", self._Durability)
-        print("The stand's Precision is: ", self._Precision)
-        print("The stand's Potential is: ", self._Potential)
+    def Durability(self):
+        print("The stand's durability is: ", self._Durability)
+    def Precision(self):
+        print("The stand's precision is: ", self._Precision)
+    def Potential(self):
+        print("The stand's potential is: ", self._Potential)
 
 instanceStand = Stand()
 nogEenStand = Stand()
 print( instanceStand._Power )
 
+instanceStand._Power = 'A'
+instanceStand._Speed = 'B'
+instanceStand._Range = 'A'
+instanceStand._Durability = 'C'
+instanceStand._Precision = 'B'
+instanceStand._Potential = 'B'
 
-instanceMario._Speed = 'B'
 
-
+print(instanceStand._Power)
 print(instanceStand._Speed)
+print(instanceStand._Range)
+print(instanceStand._Durability)
+print(instanceStand._Precision)
+print(instanceStand._Potential)
 print("InstanceStand snelheid: ", instanceStand)
 
 
