@@ -34,7 +34,12 @@ class link:
      def __init__(self, lives):
          self.lives = lives
          
-     print("You have", lives, "lives")
+print("You have", link.lives, "lives")
+
+player1 = link
+player1.lives = 190
+
+print("player1.lives", link.lives)
 
 while IS_RUNNING:
 
