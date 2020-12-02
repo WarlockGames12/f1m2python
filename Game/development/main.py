@@ -22,14 +22,19 @@ BG_COLOUR = [0, 0, 0]
 IS_RUNNING = True
 
 
+
+
 playerSprite = pygame.image.load("../art/spr_Player.png")
 playerRect = playerSprite.get_rect()
 playerSpeed = 5
 
-enemySprite = pygame.image.load("../art/spr_Enemy.png")
-enemyRect = enemySprite.get_rect()
-enemySpeed = 5
+class link:
 
+     lives = 3
+     def __init__(self, lives):
+         self.lives = lives
+         
+     print("You have", lives, "lives")
 
 while IS_RUNNING:
 
