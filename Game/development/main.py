@@ -41,6 +41,89 @@ player1.lives = 190
 
 print("player1.lives", link.lives)
 
+
+class Character :
+
+    speed = 10
+    points = 0
+    sprite = None
+    iq = 100
+
+    def __init__(self) : 
+        print("De constructor van de character")
+
+    def Walk(self):
+        print("Character loopt nu met snelheid ", self.speed)
+
+
+class Mario(Character):
+    
+    lives = 4
+    item = None
+    
+
+    def __init__(self):
+        # We vullen aan op de constructor van de Character
+        super().__init__()
+
+        #de snelheid van mario is standaard hoger
+        self.speed = 30
+        self.iq = 125
+
+    def Jump(self) :
+        print("Mario Springt!")
+
+    def Walk(self):
+        print("Mario loop heel anders, maar wel met de snelheid ", self.speed)
+
+    def life(self):
+        print("Hij heeft in levens totaal ", self.lives)
+
+
+class Goomba(Character):
+
+    chase = 1
+    item = None
+    iq = 90
+    
+
+    def __init__(self):
+        super().__init__()
+
+        self.speed = 5
+        self.points = 2
+
+    def Walk(self) :
+        print("Goomba's speed is", self.speed)
+    def point(self):
+        print("The points of a goomba are ", self.points)
+    def iq(self):
+        print("The iq of a goomba are ", self.iq)
+
+#instanties maken
+characterA = Character()
+MarioX = Mario()
+GoombaX = Goomba()
+
+
+characterA.Walk()
+MarioX.Walk()
+GoombaX.Walk()
+MarioX.life()
+GoombaX.point()
+GoombaX.iq()
+
+print(MarioX.speed)
+print(characterA.speed)
+print(MarioX.lives)
+print(GoombaX.speed)
+print(GoombaX.point)
+print(GoombaX.iq)
+
+# Het resultaat in de console geeft een geheugenadres weer.
+# Dit geheigenadres verwijst naar de locatie van het volledige object:
+print(MarioX)
+
 while IS_RUNNING:
 
 

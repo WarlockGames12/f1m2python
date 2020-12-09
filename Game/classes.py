@@ -1,4 +1,5 @@
 class Mario: 
+
     _lives = 3
     _speed = 30.0
 
@@ -17,46 +18,26 @@ instanceMario._speed = 50.5
 print(instanceMario._lives)
 print("InstanceMario snelheid: ", instanceMario)
 
-class Stand:
-    _Power = 'C'
-    _Speed = 'A'
-    _Range = 'A'
-    _Durability = 'D'
-    _Precision = 'A'
-    _Potential = 'C'
-
-    def Power(self):
-        print("The stand's power is: ", self._Power)
-    def Speed(self):
-        print("The stand's speed is: ", self._Speed)
-    def Range(self):
-        print("The stand's range is: ", self._Range)
-    def Durability(self):
-        print("The stand's durability is: ", self._Durability)
-    def Precision(self):
-        print("The stand's precision is: ", self._Precision)
-    def Potential(self):
-        print("The stand's potential is: ", self._Potential)
-
-instanceStand = Stand()
-nogEenStand = Stand()
-print( instanceStand._Power )
-
-instanceStand._Power = 'A'
-instanceStand._Speed = 'B'
-instanceStand._Range = 'A'
-instanceStand._Durability = 'C'
-instanceStand._Precision = 'B'
-instanceStand._Potential = 'B'
 
 
-print(instanceStand._Power)
-print(instanceStand._Speed)
-print(instanceStand._Range)
-print(instanceStand._Durability)
-print(instanceStand._Precision)
-print(instanceStand._Potential)
-print("InstanceStand snelheid: ", instanceStand)
+class Mario1:
+
+    lives = 4
+    speed = 30
+    points = 0
+    item = None
+
+    def __init__(self):
+        #Dit is de constructor functie
+        print("yay")
+    def Walk(self):
+        #instructies voor lopen
+        print("yayss")
+
+mario2 = Mario1()
+mario3 = Mario1()
+mario2.points += 50
+mario3.Walk()
 
 
 
